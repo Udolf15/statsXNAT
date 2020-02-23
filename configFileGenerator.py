@@ -1,5 +1,5 @@
 from pyxnat import Interface
-
+import getpass
 
 class ConfigFileGenerator:
 
@@ -9,7 +9,7 @@ class ConfigFileGenerator:
     def nameAndPass(self):
 
         self.name = input("Enter Username : ")
-        self.password = input("Enter Password : ")
+        self.password = getpass.getpass("Enter Password : ")
 
     def generator(self):
 
