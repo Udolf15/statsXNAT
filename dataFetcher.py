@@ -15,7 +15,7 @@ class Fetcher:
             output = self.selector.select('xnat:projectData').all() 
             return output
         except:
-            print("ERROR : ",SystemError)
+            print("ERROR : Unable to connect to the database")
             return None
 
 
@@ -27,7 +27,7 @@ class Fetcher:
             output = self.selector.select('xnat:subjectData').all()
             return output
         except:
-            print("ERROR : ",SystemError)
+            print("ERROR : Unable to connect to the database")
             return None
 
     def getExperiments(self):
@@ -38,5 +38,5 @@ class Fetcher:
             output = self.selector.select('xnat:mrSessionData').all()
             return output
         except:
-            print("ERROR : ",SystemError)
+            print("ERROR : Unable to connect to the database")
             return None
