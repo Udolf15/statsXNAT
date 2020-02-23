@@ -2,7 +2,7 @@ import dataFetcher
 
 class Formatter:
 
-    data = dataFetcher.Fetcher()
+    data = dataFetcher.Fetcher()            # Data Fetcher Object
 
     def projectsFormatter(self):
 
@@ -32,7 +32,6 @@ class Formatter:
 
         else:
             
-            print("Unable to fetch data")
             print("Please check username or password in your configuration file")
 
 
@@ -66,7 +65,6 @@ class Formatter:
 
         else:
             
-            print("Unable to fetch data")
             print("Please check username or password in your configuration file")
 
 

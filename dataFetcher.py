@@ -12,6 +12,7 @@ class Fetcher:
         # Return a json table with all visible project details or public projects  to user
 
         try:
+            print("Processing............")
             output = self.selector.select('xnat:projectData').all() 
             return output
         except:
@@ -24,6 +25,7 @@ class Fetcher:
         # Return a json table with all visible subjects details or public subjects to the user
 
         try:
+            print("Processing............")
             output = self.selector.select('xnat:subjectData').all()
             return output
         except:
@@ -35,6 +37,7 @@ class Fetcher:
         # Return a json table with all visible project details or public projects to user
 
         try:
+            print("Processing............")
             output = self.selector.select('xnat:mrSessionData').all()
             return output
         except:
