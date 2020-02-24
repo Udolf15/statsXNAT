@@ -2,7 +2,7 @@ import dataFetcher
 
 class Formatter:
 
-    data = dataFetcher.Fetcher()            # Data Fetcher Object
+    data = dataFetcher.Fetcher()   # Data Fetcher Object
 
     def projectsFormatter(self):
 
@@ -31,7 +31,7 @@ class Formatter:
                 print("\n\n\n\n")
 
         else:
-            
+            print("Please check network connection")
             print("Please check username or password in your configuration file")
 
 
@@ -64,7 +64,7 @@ class Formatter:
                 print("\n\n\n\n")
 
         else:
-            
+            print("Please check network connection")
             print("Please check username or password in your configuration file")
 
 
@@ -86,33 +86,37 @@ class Formatter:
         counterU = 0
 
         # Looping through each subject to get the required count
+        if(subjectsTable != None):
+            for subject in subjectsTable:
 
-        for subject in subjectsTable:
+                gender = subject['gender_text']
+                hand = subject['handedness_text']
 
-            gender = subject['gender_text']
-            hand = subject['handedness_text']
+                if(gender == 'M'):
+                    counterM = counterM + 1
+                elif(gender == 'F'):
+                    counterF = counterF + 1
+                else:
+                    counterU = counterU + 1
 
-            if(gender == 'M'):
-                counterM = counterM + 1
-            elif(gender == 'F'):
-                counterF = counterF + 1
-            else:
-                counterU = counterU + 1
-
-            if(hand == 'R'):
-                counterRH = counterRH + 1
-            elif(hand == 'L'):
-                counterLH = counterLH + 1
-            else:
-                counterUH = counterUH + 1
+                if(hand == 'R'):
+                    counterRH = counterRH + 1
+                elif(hand == 'L'):
+                    counterLH = counterLH + 1
+                else:
+                    counterUH = counterUH + 1
 
 
-        print("Number of Projects : ", len(projectsTable))
-        print("Number of Subjects : ", len(subjectsTable))
-        print("Number of Mr Sessions : ", len(experimentsTable))
-        print("Number of Left handed subjects : ", counterLH)
-        print("Number of Right handed subjects : ", counterRH)
-        print("Number of Unknown handed subjects : ", counterUH)
-        print("Number of Male subjects : ", counterM)
-        print("Number of Female subjects : ", counterF)
-        print("Number of Unknown gender subjets : ",counterU)
+            print("Number of Projects : ", len(projectsTable))
+            print("Number of Subjects : ", len(subjectsTable))
+            print("Number of Mr Sessions : ", len(experimentsTable))
+            print("Number of Left handed subjects : ", counterLH)
+            print("Number of Right handed subjects : ", counterRH)
+            print("Number of Unknown handed subjects : ", counterUH)
+            print("Number of Male subjects : ", counterM)
+            print("Number of Female subjects : ", counterF)
+            print("Number of Unknown gender subjets : ",counterU)
+        
+        else:
+            print("Please check network connection")
+            print("Please check username or password in configuration file")
