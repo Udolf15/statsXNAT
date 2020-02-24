@@ -8,8 +8,8 @@ class ConfigFileGenerator:
 
     def nameAndPass(self):
 
-        self.name = input("Enter Username : ")
-        self.password = getpass.getpass("Enter Password : ")
+        self.name = input("Enter Username for central XNAT server : ")
+        self.password = getpass.getpass("Enter Password for central XNAT server : ")
 
     def generator(self):
 
@@ -18,7 +18,7 @@ class ConfigFileGenerator:
                             password = self.password    )
 
         central.save_config('ConfigFile/central.cfg')
-        
+        print("Configuration file Created...........")
 
 if __name__ == "__main__":
     ConfigObj = ConfigFileGenerator()
