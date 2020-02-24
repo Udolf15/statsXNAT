@@ -9,7 +9,7 @@ class Fetcher:
 
     def getProjects(self):
 
-        # Return a json table with all visible project details or public projects  to user
+        # Returns a json table with all visible project details or public projects  to user
 
         try:
             print("Processing............")
@@ -22,7 +22,7 @@ class Fetcher:
 
     def getSubjects(self):
 
-        # Return a json table with all visible subjects details or public subjects to the user
+        # Returns a json table with all visible subjects details or public subjects to the user
 
         try:
             print("Processing............")
@@ -34,7 +34,7 @@ class Fetcher:
 
     def getExperiments(self):
 
-        # Return a json table with all visible project details or public projects to user
+        # Returns a json table with all visible project details or public projects to user
 
         try:
             print("Processing............")
