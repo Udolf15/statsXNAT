@@ -16,12 +16,4 @@ statsXNAT is a set of programs which gives the user to get an overview of the da
 
 The following diagram show the flow of information from different part of the program
 
-```mermaid
-graph LR
-A[dataView] -- Request to dataFormatter --> B((dataFormatter))
-B((dataFormatter)) -- Request to dataFetcher --> C((dataFetcher))
-C((dataFetcher)) -- Request to XNAT server using pyXNAT --> D((XNAT Server))
-D((XNAT Server)) -- Response to dataFetcher using pyXNAT--> C((dataFetcher))
-C((dataFetcher)) -- Data to dataFormatter for formatting --> B((dataFormatter))
-B((dataFormatter)) -- Data provided to dataView --> A((dataView))
-```
+![Flow Diagram](https://github.com/Udolf15/statsXNAT/images/flowDiagram.png)
