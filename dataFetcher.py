@@ -5,7 +5,11 @@ from pyxnat import *
 
 class Fetcher:
 
-    selector = Interface(config = 'ConfigFile/central.cfg')
+    try: # Checking if the configuration file is created
+        selector = Interface(config = 'ConfigFile/central.cfg')
+    except:
+        print("Please create the configuration file first")
+        exit(1)
 
     def getProjects(self):
 
