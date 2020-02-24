@@ -8,9 +8,9 @@ statsXNAT is a set of programs which gives the user to get an overview of the da
  - [pyXNAT](https://pyxnat.github.io/pyxnat/index.html) 
 
 ## Getting Started
-- ```pip3 install -r requirements.txt```
-- ```python3 configFileGenerator.py```
-- ```python3 dataView.py```
+- For installing the required dependencies type ```pip3 install -r requirements.txt``` 
+- For generating the central.cfg file           ```python3 configFileGenerator.py```      
+- For running the main program                  ```python3 dataView.py```               
 
 ## Flow Diagram
 
