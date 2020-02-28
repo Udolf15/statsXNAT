@@ -1,6 +1,6 @@
 print("\nProcessing............")
 
-import dataFormatter
+from src import dataFormatter
 
 # View class
 class View:
