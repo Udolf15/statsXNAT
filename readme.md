@@ -16,4 +16,4 @@ statsXNAT is a set of programs which gives the user to get an overview of the da
 
 The following diagram show the flow of information from different modules of the program
 
-![Flow Diagram](https://github.com/Udolf15/statsXNAT/blob/master/images/flowDiagram.png)
+![Flow Diagram](https://github.com/Udolf15/statsXNAT/blob/master/images/flowDiagram.jpg)
