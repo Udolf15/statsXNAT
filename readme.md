@@ -1,6 +1,6 @@
 # statsXNAT
 
-statsXNAT is a set of programs which gives the user to get an overview of the data present at XNAT servers. statsXNAT uses pyXNAT to connect to the XNAT servers using RESTful Web services provided by XNAT.
+statsXNAT is a set of programs which gives the user an overview of the data present at XNAT servers. statsXNAT uses pyXNAT to connect to the XNAT servers using RESTful Web services provided by XNAT.
 
 
 ## Dependencies
