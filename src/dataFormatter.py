@@ -1,4 +1,4 @@
-import dataFetcher
+from src import dataFetcher
 
 class Formatter:
 
