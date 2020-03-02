@@ -4,21 +4,21 @@ class Formatter:
 
     data = dataFetcher.Fetcher()   # Data Fetcher Object
 
-    def projectsFormatter(self):
+    def projects_formatter(self):
 
         # Show the important fields of the project
 
-        projectsTable = self.data.getProjects()
+        projects_table = self.data.get_projects()
 
-        if(projectsTable != None):
+        if(projects_table != None):
             
             print("PROJECT DETAILS")
-            print("Number of project visible are ",len(projectsTable))
+            print("Number of project visible are ",len(projects_table))
             print("\n\n\n\n")
 
             # Looping through each project to show the important fields
 
-            for project in projectsTable:
+            for project in projects_table:
 
                 print("Project Creation Date : ", project['insert_date'])
                 print("Project Owner Name: ", project['insert_user'])
@@ -35,21 +35,21 @@ class Formatter:
             print("Please check username or password in your configuration file")
 
 
-    def subjectsFormatter(self): 
+    def subjects_formatter(self): 
 
         # Show the the important fields of subjects
 
-        subjectsTable = self.data.getSubjects()
+        subjeccts_tableable = self.data.get_subjects()
 
-        if(subjectsTable != None):
+        if(subjeccts_tableable != None):
             
             print("SUBJECT DETAILS")
-            print("Number of subjects visible are ",len(subjectsTable))
+            print("Number of subjects visible are ",len(subjeccts_tableable))
             print("\n\n\n\n")
 
             # Looping through each subject to show the important fields
 
-            for subject in subjectsTable:
+            for subject in subjeccts_tableable:
 
                 print("Subject Creation Date : ", subject['insert_date'])
                 print("Subject Creator Name: ", subject['insert_user'])
@@ -72,50 +72,50 @@ class Formatter:
 
         # Show the overall data counts present on XNAT 
 
-        projectsTable = self.data.getProjects()
-        subjectsTable = self.data.getSubjects()
-        experimentsTable = self.data.getExperiments()
+        projects_table = self.data.get_projects()
+        subjects_table = self.data.get_subjects()
+        experimentsTable = self.data.get_experiments()
 
         # Counter variable for different fields
 
-        counterLH = 0
-        counterRH = 0
-        counterUH = 0
-        counterM = 0
-        counterF = 0
-        counterU = 0
+        counter_left_hand = 0
+        counter_right_hand = 0
+        counter_unknown_hand = 0
+        counter_male = 0
+        counter_female = 0
+        counter_unknown = 0
 
         # Looping through each subject to get the required count
-        if(subjectsTable != None):
-            for subject in subjectsTable:
+        if(subjects_table != None):
+            for subject in subjects_table:
 
                 gender = subject['gender_text']
                 hand = subject['handedness_text']
 
                 if(gender == 'M'):
-                    counterM = counterM + 1
+                    counter_male = counter_male + 1
                 elif(gender == 'F'):
-                    counterF = counterF + 1
+                    counter_female = counter_female + 1
                 else:
-                    counterU = counterU + 1
+                    counter_unknown = counter_unknown + 1
 
                 if(hand == 'R'):
-                    counterRH = counterRH + 1
+                    counter_right_hand = counter_right_hand + 1
                 elif(hand == 'L'):
-                    counterLH = counterLH + 1
+                    counter_left_hand = counter_left_hand + 1
                 else:
-                    counterUH = counterUH + 1
+                    counter_unknown_hand = counter_unknown_hand + 1
 
 
-            print("Number of Projects : ", len(projectsTable))
-            print("Number of Subjects : ", len(subjectsTable))
+            print("Number of Projects : ", len(projects_table))
+            print("Number of Subjects : ", len(subjects_table))
             print("Number of Mr Sessions : ", len(experimentsTable))
-            print("Number of Left handed subjects : ", counterLH)
-            print("Number of Right handed subjects : ", counterRH)
-            print("Number of Unknown handed subjects : ", counterUH)
-            print("Number of Male subjects : ", counterM)
-            print("Number of Female subjects : ", counterF)
-            print("Number of Unknown gender subjets : ",counterU)
+            print("Number of Left handed subjects : ", counter_left_hand)
+            print("Number of Right handed subjects : ", counter_right_hand)
+            print("Number of Unknown handed subjects : ", counter_unknown_hand)
+            print("Number of Male subjects : ", counter_male)
+            print("Number of Female subjects : ", counter_female)
+            print("Number of Unknown gender subjets : ",counter_unknown)
         
         else:
             print("Please check network connection")

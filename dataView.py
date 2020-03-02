@@ -9,7 +9,7 @@ class View:
     opted = 0
 
     # Option that are available now
-    def viewOptions(self):
+    def view_options(self):
         
         print("\n")
         print("View all the projects visible to you press 1")
@@ -17,14 +17,14 @@ class View:
         print("View the stats of the XNAT visible to you press 3")
 
         self.opted = int(input("Enter your choice : "))
-        self.viewSelected()
+        self.view_selected()
 
-    def viewSelected(self):
+    def view_selected(self):
 
         if(self.opted == 1):
-            self.formatter.projectsFormatter()
+            self.formatter.projects_formatter()
         elif(self.opted == 2):
-            self.formatter.subjectsFormatter()
+            self.formatter.subjects_formatter()
         elif(self.opted == 3):
             self.formatter.stats()
         else:
@@ -33,4 +33,4 @@ class View:
 
 if __name__ == "__main__":
     view = View()
-    view.viewOptions()
+    view.view_options()

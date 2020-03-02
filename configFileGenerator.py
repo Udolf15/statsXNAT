@@ -6,7 +6,7 @@ class ConfigFileGenerator:
     name = ""
     password = ""
 
-    def nameAndPass(self): # Function for taking input from the users
+    def name_and_pass(self): # Function for taking input from the users
 
         self.name = input("Enter Username for central XNAT server : ")
         self.password = getpass.getpass("Enter Password for central XNAT server : ")
@@ -22,5 +22,5 @@ class ConfigFileGenerator:
 
 if __name__ == "__main__":
     ConfigObj = ConfigFileGenerator()
-    ConfigObj.nameAndPass()
+    ConfigObj.name_and_pass()
     ConfigObj.generator()
