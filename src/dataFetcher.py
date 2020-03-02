@@ -1,6 +1,6 @@
 # file for fetching data from CENTRAL XNAT
 
-from pyxnat import *
+from pyxnat import Interface
 
 
 class Fetcher:
@@ -11,7 +11,7 @@ class Fetcher:
         print("Please create the configuration file first")
         exit(1)
 
-    def getProjects(self):
+    def get_projects(self):
 
         # Returns a json table with all visible project details or public projects  to user
 
@@ -24,7 +24,7 @@ class Fetcher:
             return None
 
 
-    def getSubjects(self):
+    def get_subjects(self):
 
         # Returns a json table with all visible subjects details or public subjects to the user
 
@@ -36,7 +36,7 @@ class Fetcher:
             print("ERROR : Unable to connect to the database")
             return None
 
-    def getExperiments(self):
+    def get_experiments(self):
 
         # Returns a json table with all visible project details or public projects to user
 
