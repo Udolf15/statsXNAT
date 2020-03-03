@@ -6,7 +6,7 @@ from pyxnat import Interface
 class Fetcher:
 
     try: # Checking if the configuration file is created
-        selector = Interface(config = 'ConfigFile/central.cfg')
+        SELECTOR = Interface(config = 'ConfigFile/central.cfg')
     except:
         print("Please create the configuration file first")
         exit(1)
@@ -17,7 +17,7 @@ class Fetcher:
 
         try:
             print("Processing............")
-            output = self.selector.select('xnat:projectData').all() 
+            output = self.SELECTOR.select('xnat:projectData').all() 
             return output
         except:
             print("ERROR : Unable to connect to the database")
@@ -30,7 +30,7 @@ class Fetcher:
 
         try:
             print("Processing............")
-            output = self.selector.select('xnat:subjectData').all()
+            output = self.SELECTOR.select('xnat:subjectData').all()
             return output
         except:
             print("ERROR : Unable to connect to the database")
@@ -42,7 +42,7 @@ class Fetcher:
 
         try:
             print("Processing............")
-            output = self.selector.select('xnat:mrSessionData').all()
+            output = self.SELECTOR.select('xnat:mrSessionData').all()
             return output
         except:
             print("ERROR : Unable to connect to the database")

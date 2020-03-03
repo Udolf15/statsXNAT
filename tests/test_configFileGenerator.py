@@ -7,7 +7,7 @@ config_object = configFileGenerator.ConfigFileGenerator()
 # Function for testing the name and password entered 
 def test_name_and_pass():
 
-    config_object.name_and_pass(testCheck=1)
+    config_object.name_and_pass(test_check=1)
 
     assert config_object.name == 'testUser'
     assert config_object.password == 'testPassword'
