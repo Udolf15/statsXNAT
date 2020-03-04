@@ -6,10 +6,14 @@ class ConfigFileGenerator:
     name = ""
     password = ""
 
-    def name_and_pass(self): # Function for taking input from the users
+    def name_and_pass(self, testCheck=0): # Function for taking input from the users
 
-        self.name = input("Enter Username for central XNAT server : ")
-        self.password = getpass.getpass("Enter Password for central XNAT server : ")
+        if(testCheck == 0):
+            self.name = input("Enter Username for central XNAT server : ")
+            self.password = getpass.getpass("Enter Password for central XNAT server : ")
+        else:
+            self.name = 'testUser'
+            self.password = 'testPassword'
 
     def generator(self): # Function for creating the configuration file
 
