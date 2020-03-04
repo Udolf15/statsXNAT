@@ -11,20 +11,17 @@ class Fetcher:
         print("Please create the configuration file first")
         exit(1)
 
-    output = ""
-
     def get_projects(self):
 
         # Returns a json table with all visible project details or public projects  to user
 
         try:
             print("Processing............")
-            self.output = self.selector.select('xnat:projectData').all() 
+            output = self.selector.select('xnat:projectData').all() 
+            return output
         except:
             print("ERROR : Unable to connect to the database")
-            self.output = None
-            
-        return self.output
+            return None
 
 
     def get_subjects(self):
@@ -33,12 +30,11 @@ class Fetcher:
 
         try:
             print("Processing............")
-            self.output = self.selector.select('xnat:subjectData').all()
+            output = self.selector.select('xnat:subjectData').all()
+            return output
         except:
             print("ERROR : Unable to connect to the database")
-            self.output = None
-
-        self.output
+            return None
 
     def get_experiments(self):
 
@@ -46,9 +42,8 @@ class Fetcher:
 
         try:
             print("Processing............")
-            self.output = self.selector.select('xnat:mrSessionData').all()
+            output = self.selector.select('xnat:mrSessionData').all()
+            return output
         except:
             print("ERROR : Unable to connect to the database")
-            self.output = None
-
-        return self.output
+            return None

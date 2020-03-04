@@ -39,17 +39,17 @@ class Formatter:
 
         # Show the the important fields of subjects
 
-        subjeccts_tableable = self.data.get_subjects()
+        subjects_table = self.data.get_subjects()
 
-        if(subjeccts_tableable != None):
+        if(subjects_table != None):
             
             print("SUBJECT DETAILS")
-            print("Number of subjects visible are ",len(subjeccts_tableable))
+            print("Number of subjects visible are ", len(subjects_table))
             print("\n\n\n\n")
 
             # Looping through each subject to show the important fields
 
-            for subject in subjeccts_tableable:
+            for subject in subjects_table:
 
                 print("Subject Creation Date : ", subject['insert_date'])
                 print("Subject Creator Name: ", subject['insert_user'])
