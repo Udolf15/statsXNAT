@@ -1,4 +1,4 @@
-from urllib3 import request
+from urllib import request
 
 # This file is used to check for network connection during testing
 # If no network connection found the test depending on network will be skipped
