@@ -6,6 +6,7 @@ statsXNAT is a set of programs which gives the user an overview of the data pres
 ## Dependencies
 
  - [pyXNAT](https://pyxnat.github.io/pyxnat/index.html) 
+ - [PyTest](https://docs.pytest.org/en/latest/)
 
 ## Getting Started
 - For installing the required dependencies type ```pip3 install -r requirements.txt``` 
